@@ -1,0 +1,12 @@
+
+@font-face {
+  font-family: 'iransans';
+  src: url('./fonts/IRANSansLight.woff2') format('woff2'),
+       url('./fonts/IRANSansLight.woff2') format('woff2');
+  font-weight: light;
+  font-style: normal; /* تغییر به normal */
+}
+
+.iransans { 
+  font-family: iransans;
+}
