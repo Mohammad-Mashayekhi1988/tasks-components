@@ -26,6 +26,6 @@ watch(myDate, (newVal) => {
 .app {
   display: flex;
   justify-content: center;
-  margin-bottom: 1000px;
+  margin-bottom: 100px;
 }
 </style>

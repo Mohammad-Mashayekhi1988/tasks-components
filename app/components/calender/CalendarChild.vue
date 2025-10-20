@@ -20,7 +20,7 @@
 
         <div class="center" >
           <div class="month-title" @click.stop="openMonthList">{{ monthNames[currentMonth] }}</div>
-          <div class="year-title"  @click.stop="openYearList">{{ currentYear }}</div>
+          <div class="year-title"  @click.stop="openYearList">{{ currentYearFa }}</div>
         </div>
 
         <button class="nav-btn" @click="nextPage" aria-label="بعدی">›</button>
@@ -52,8 +52,8 @@
             :class="{ active: y === currentYear }"
             @click="onYearClick(y)"
           >
-            {{ y }}
-          </button>
+          {{ toPersianDigits(y) }}
+        </button>
         </div>
 
         <!-- نمایش روزها -->
@@ -77,7 +77,7 @@
               :class="{ selected: isSelected(day), today: isToday(day) }"
               @click="onDayClick(day)"
             >
-              {{ day.jd }}
+              {{ toPersianDigits(day.jd) }}
             </button>
           </div>
         </div>
@@ -268,15 +268,32 @@ function nextPage() {
 //   emit("update:modelValue", null);
 // }
 
-// نمایش تاریخ انتخاب شده در هدر
+
+// تبدیل ارقام لاتین به فارسی
+const currentYearFa = computed(() => toPersianDigits(currentYear.value));
+function toPersianDigits(input) {
+  const map = {
+    "0": "۰",
+    "1": "۱",
+    "2": "۲",
+    "3": "۳",
+    "4": "۴",
+    "5": "۵",
+    "6": "۶",
+    "7": "۷",
+    "8": "۸",
+    "9": "۹",
+  };
+  const s = String(input == null ? "" : input);
+  return s.replace(/\d/g, d => map[d]);
+}
+
+// تبدیل تاریخ انتخاب شده در هدر به فارسی
 const displayValue = computed(() => {
   if (selected.value) {
-    const pad = (n) => String(n).padStart(2, "0");
-    return `${selected.value.jy} / ${pad(selected.value.jm)} / ${pad(
-      selected.value.jd
-    )}`;
+    const pad = (n) => toPersianDigits(String(n).padStart(2, "0"));
+    return `${toPersianDigits(selected.value.jy)} _ ${pad(selected.value.jm)} _ ${pad(selected.value.jd)}`;
   }
-
   return props.placeholder;
 });
 

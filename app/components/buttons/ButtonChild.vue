@@ -16,22 +16,22 @@
     <!-- icons -->
 
     <template v-if="props.iconPosition === 'left'" #prepend>
-      <v-icon :icon="mdiIcon" size="md" :color="iconColor" />
+      <v-icon :icon="mdiIcon" :size="iconSize" :color="iconColor" />
     </template>
 
     <template v-if="props.iconPosition === 'top'">
-      <v-icon :icon="mdiIcon" size="2.5rem" :color="iconColor" class="mb-2" />
+      <v-icon :icon="mdiIcon" :size="iconSize" :color="iconColor" class="mb-2" />
     </template>
 
     <template v-if="props.iconPosition === 'right'" #append>
-      <v-icon :icon="mdiIcon" size="md" :color="iconColor" />
+      <v-icon :icon="mdiIcon" :size="iconSize" :color="iconColor" />
     </template>
 
     <span
       class="btn-text"
       :style="{ color: textColor, fontSize: textSize, fontWeight: textWeight }"
     >
-      <slot>Button</slot>
+      <slot>{{ text }}</slot>
     </span>
   </v-btn>
 </template>
@@ -45,6 +45,7 @@ const props = defineProps({
   textSize: { type: String, default: "1rem" },
   textWeight: { type: [String, Number], default: "400" },
   border: String,
+  text: String,
   color: String,
   disabled: Boolean,
   btnBorder: Boolean,
@@ -55,10 +56,11 @@ const props = defineProps({
   mdiIconsize: { type: Number, default: 24 },
   stacked: Boolean,
   fullWidth: Boolean,
+  fullHeight:Boolean,
   iconSize: { type: [String, Number], default: 20 },
   iconPosition: {
     type: String,
-    default: "left",
+    default: "",
     validator: (v: string) => ["left", "right", "top"].includes(v),
   },
 });
@@ -81,6 +83,7 @@ const baseStyle = computed(() => ({
       ? props.borderRadius + "px"
       : props.borderRadius,
   width: props.fullWidth ? "100%" : undefined,
+  height: props.fullHeight ? "100%" : undefined,
 }));
 // style
 
@@ -89,6 +92,7 @@ const finalStyle = computed(() => {
   if (!useVuetifyColor.value && props.color) {
     s.backgroundColor = props.color;
   }
+
   // border
 
   if (props.border) {
@@ -114,5 +118,6 @@ const iconNode = computed(() => {
 
 function onClick(e: MouseEvent) {
   emit("onBTNCLICK", e, "دکمه کلیک شد");
+
 }
 </script>

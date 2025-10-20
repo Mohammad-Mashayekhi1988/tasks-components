@@ -13,10 +13,19 @@
     <ModelParent />
 
     <CalendarParent />
+
+    <DropDownParent />
+
+    <StepsParent />
+
+    <InsuranseFild />
   </div>
 </template>
 
 <script setup lang="ts">
+import InsuranseFild from "./components/insuranseFild/InsuranseFild.vue";
+import StepsParent from "./components/steps/StepsParent.vue";
+import DropDownParent from "./components/dropdown/DropdownParent.vue";
 import ModelParent from "./components/motor model/ModelParent.vue";
 import MotorParent from "./components/motor license plate/MotorParent.vue";
 import CarParent from "./components/license plate/CarParent.vue";

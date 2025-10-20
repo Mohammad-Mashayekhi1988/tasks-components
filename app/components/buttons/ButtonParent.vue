@@ -1,23 +1,24 @@
 <template>
-    
-    <div id="buttons">
+  <div id="buttons">
     <!-- button-left -->
-    <div style="width: auto; height: auto">
+    <div style="width: 300px; height: 50px">
       <ButtonChild
-        @onBTNCLICK="handleClick"
-        color="green"
+        color=""
         icon="icon"
         mdiIcon="mdi-check"
         prepend="mdi-star"
         append="mdi-check"
         fullWidth
+        fullHeight
         borderRadius="10px"
+        border="2px solid rgb(188,188,188)"
+        @onBTNCLICK="handleClick"
       >
       </ButtonChild>
     </div>
     <!-- button-between -->
 
-    <div style="width: 250px; height: auto">
+    <div style="width: 250px; height: 100px">
       <ButtonChild
         text-color="#00ACC1"
         text-size="1.5rem"
@@ -26,8 +27,10 @@
         height="100px"
         color=""
         icon="icon"
+        iconSize="2.5rem"
         mdiIcon="mdi-motorbike"
         fullWidth
+        fullHeight
         :stacked="true"
         borderRadius="10px"
         iconPosition="top"
@@ -46,10 +49,12 @@
         text-weight="700"
         icon-color="#fff"
         height="100px"
+        iconSize="2.5rem"
         color="#00ACC1"
         icon="icon"
         mdiIcon="mdi-car-hatchback"
         fullWidth
+        fullHeight
         :stacked="true"
         borderRadius="10px"
         iconPosition="top"
@@ -68,6 +73,7 @@
         mdiIcon="mdi-check"
         append="mdi-check"
         fullWidth
+        fullHeight
         borderRadius="20px"
         iconPosition="right"
       >
@@ -77,7 +83,6 @@
 </template>
 
 <script setup lang="ts">
-
 import ButtonChild from "./ButtonChild.vue";
 function handleClick(event: MouseEvent, data: string) {
   console.log("child message : ", data);
@@ -92,5 +97,4 @@ function handleClick(event: MouseEvent, data: string) {
   gap: 50px;
   margin-top: 30px;
 }
-
 </style>
