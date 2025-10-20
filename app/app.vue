@@ -23,10 +23,13 @@
     <DateParent/>
 
     <Text/>
+
+    <DiscountCode />
   </div>
 </template>
 
 <script setup lang="ts">
+import DiscountCode from "./components/discount code/DiscountCode.vue";
 import Text from "./components/text/Text.vue";
 import DateParent from "./components/date/DateParent.vue";
 import InsuranseFild from "./components/insuranseFild/InsuranseFild.vue";
