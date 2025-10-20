@@ -35,9 +35,9 @@
         borderRadius="10px"
         iconPosition="top"
         border="2px solid #00ACC1"
+        text="بیمه موتور"
         @onBTNCLICK="handleClick"
       >
-        بیمه موتور
       </ButtonChild>
     </div>
     <!-- button-between -->
@@ -58,9 +58,9 @@
         :stacked="true"
         borderRadius="10px"
         iconPosition="top"
+        text="بیمه خودرو"
         @onBTNCLICK="handleClick"
       >
-        بیمه خودرو
       </ButtonChild>
     </div>
     <!-- button-right -->

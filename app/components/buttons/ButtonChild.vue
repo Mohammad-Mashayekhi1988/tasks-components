@@ -57,6 +57,8 @@ const props = defineProps({
   stacked: Boolean,
   fullWidth: Boolean,
   fullHeight:Boolean,
+  height:String,
+  width:String,
   iconSize: { type: [String, Number], default: 20 },
   iconPosition: {
     type: String,
@@ -82,8 +84,8 @@ const baseStyle = computed(() => ({
     typeof props.borderRadius === "number"
       ? props.borderRadius + "px"
       : props.borderRadius,
-  width: props.fullWidth ? "100%" : undefined,
-  height: props.fullHeight ? "100%" : undefined,
+  width: props.fullWidth ? "100%" : props.width,
+  height: props.fullHeight ? "100%" : props.height,
 }));
 // style
 
