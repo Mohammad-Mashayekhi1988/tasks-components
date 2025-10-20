@@ -19,10 +19,13 @@
     <StepsParent />
 
     <InsuranseFild />
+
+    <DateParent/>
   </div>
 </template>
 
 <script setup lang="ts">
+import DateParent from "./components/date/DateParent.vue";
 import InsuranseFild from "./components/insuranseFild/InsuranseFild.vue";
 import StepsParent from "./components/steps/StepsParent.vue";
 import DropDownParent from "./components/dropdown/DropdownParent.vue";
