@@ -1,18 +1,24 @@
 <template>
-  <main class="bg-white ma-1  iransans">
-    <v-row class="pa-1 ma-1 d-flex  justify-center align-center">
-      <v-col cols="6" class="text-end ">
-        <v-card-text v-if="props.text" class="text-decoration-line-through font-weight-bold">
+  <main class="bg-white ma-1 iransans">
+    <v-row class="pa-1 ma-1 d-flex justify-center align-center">
+      <v-col cols="6" class="text-end">
+        <v-card-text
+          v-if="props.text"
+          class="text-decoration-line-through font-weight-bold"
+        >
           {{ formattedValues.text }}
         </v-card-text>
       </v-col>
-      <v-col cols="6" class="text-center " >
+      <v-col cols="6" class="text-center">
         <div v-if="props.text" class="badg font-weight-bold">
           <p>{{ discount }}%</p>
         </div>
       </v-col>
-      <v-col cols="6" class="text-end pa-0 d-flex align-center font-weight-bold ml-16">
-        <v-card-text class="text-center pa-0 pl-2 text-end font-weight-bold" >
+      <v-col
+        cols="6"
+        class="text-end pa-0 d-flex align-center font-weight-bold ml-16"
+      >
+        <v-card-text class="text-center pa-0 pl-2 text-end font-weight-bold">
           {{ formattedValues.number }}
         </v-card-text>
         <v-text>{{ currency }}</v-text>
@@ -20,6 +26,16 @@
     </v-row>
     <v-row>
       <v-col cols="6">
+<!--
+text: String
+textColor: String, default: black
+textSize:  String, default: 1rem
+fullWidth: Boolean
+textWeight:[String, Number], default: 400
+height: String
+color: String
+borderRadius: [String, Number] 
+-->
         <ButtonChild
           fullWidth
           text="انتخاب بیمه"
@@ -27,11 +43,27 @@
           text-weight="100"
           text-color="#fff"
           text-size="1rem"
-          height="100px"
+          height="50px"
           borderRadius="5px"
         />
       </v-col>
       <v-col cols="6">
+<!-- 
+  text: String
+  iconColor: String, default: white
+  textColor: String, default: black
+  textSize:  String, default: 1rem
+  fullWidth: Boolean  
+  mdiIcon: String
+  icon: String
+  iconPosition: String, default: ""
+  validator: (v: string) => ["left", "right", "top"].includes(v), 
+  textWeight:[String, Number], default: 400
+  height: String
+  color: String
+  borderRadius: [String, Number]
+  fullHeight: Boolean
+-->
         <ButtonChild
           fullWidth
           text="افزودن برای مقایسه"
@@ -68,7 +100,6 @@ const props = defineProps({
   currency: String,
   discount: { type: [String, Number], default: "" },
 });
-
 
 // تبدیل عدد به فارسی
 function toPersianNumber(num: string | number): string {

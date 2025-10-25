@@ -60,11 +60,7 @@ watch(
     selectedValue.value = val;
   }
 );
-/**
- * 
- * @param val 
- * توی این تابع ما خیلی کارا میکنیم
- */
+
 function onSelect(val) {
   emit("update:modelValue", val); // آبجکت کامل {id,label}
   open.value = false; // منو بسته شود

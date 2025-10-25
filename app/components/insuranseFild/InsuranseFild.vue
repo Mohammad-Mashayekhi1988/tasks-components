@@ -1,23 +1,19 @@
 <template>
-  <!-- <div class="container">
-    <PriceParent />
-    <Information
-  
-      insuranseText="دی"
-      :icon-url="'/icons/Day.png'"
-      icon-width="10"
-      icon-height="15"
-      branches="تعداد شعب"
-      wealth="توانگری مالی"
-      damage="پرداخت خسارت سیار"
-      branchesInfo ="24"
-      wealthInfo = "5 از 5"
-      damageInfo ="دارد"
-    />
-  </div> -->
   <v-container class="border border-black rounded-xl"  style="margin-bottom: 50px;direction: rtl;">
     <v-row>
         <v-col class="d-flex align-center justify-center pa-10  information" cols="8"  >
+<!--
+  insuranseText: String
+  iconUrl: String
+  branches: String
+  wealth: String
+  damage: String
+  branchesInfo: String
+  wealthInfo: String
+  damageInfo: String
+  iconWidth: String, default: "20px" 
+  iconHeight: String, default: "20px" 
+-->
             <Information
             insuranseText="دی"
             :icon-url="'/icons/Day.png'"
@@ -32,6 +28,16 @@
             />
         </v-col>
         <v-col  cols="4" >
+<!--
+  width: Number, default: 30 
+  height: Number, default: 30 
+  radius: [String, Number], default: 0 
+  bg: String, default: "transparent" 
+  text: String,
+  number: String,
+  currency: String,
+  discount: [String, Number], default: "" 
+-->
             <PriceParent
             text="5555555"
             number="5065981"
@@ -46,6 +52,11 @@
 
 <script setup lang="ts">
 import PriceParent from "../price/PriceParent.vue";
+/**
+ * 
+ * @param val 
+ * توی این تابع ما خیلی کارا میکنیم
+ */
 import Information from "../insuranceInformation/Information.vue";
 </script>
 
@@ -54,18 +65,3 @@ import Information from "../insuranceInformation/Information.vue";
   border-left: 3px solid rgb(199, 196, 196);
 }
 </style>
-<!-- 
-<style scoped>
-.container {
-  display: flex;
-  align-items: center;
-  margin-bottom: 200px;
-  height: 200px;
-  /* border-left:2px solid gray; */
-  /* border: 1px solid red; */
-   box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
-   margin-right: 10px;
-   /* margin-left: 100px; */
-}
-
-</style> -->

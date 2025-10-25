@@ -48,6 +48,7 @@ const props = defineProps({
   iconWidth: { type: String, default: "20px" },
   iconHeight: { type: String, default: "20px" },
 });
+
 </script>
 
 <style scoped>

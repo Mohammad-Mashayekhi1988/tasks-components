@@ -18,6 +18,16 @@
         />
       </v-col>
       <v-col cols="auto"  style="height: 50px">
+<!--
+text: String,
+textColor: String, default: black
+textSize:  String, default: 1rem
+fullWidth: Boolean
+textWeight:[String, Number], default: 400
+height: String
+color: String
+borderRadius: [String, Number] 
+-->
         <ButtonChild
           class="iransans"
           text="ثبت کد"

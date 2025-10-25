@@ -78,6 +78,9 @@ const useVuetifyColor = computed(() => {
   return !/^#|^rgb\(|^rgba\(|^hsl\(|^hsla\(/i.test(props.color);
 });
 
+
+
+
 const baseStyle = computed(() => ({
   btnBorder: props.btnBorder ? "1px solid currentColor" : undefined,
   borderRadius:

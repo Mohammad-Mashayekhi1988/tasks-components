@@ -9,7 +9,7 @@
         :type="fieldProps.type"
         :color="fieldProps.color"
         :border="fieldProps.border"
-        :border-radius="fieldProps.radius"
+        :borderRadius="fieldProps.radius"
         @focus="onFocus"
         @blur="onBlur"
         @input="onInput"
@@ -27,8 +27,8 @@ const fieldProps = reactive({
   placeholder: "کد ملی",
   type: "text",
   color: "#B6AE9F",
-  border: "10px solid transparent",
-  radius: "30px",
+  // border: "1px solid red",
+  radius: 50,
 });
 
 function onFocus(e: FocusEvent) {

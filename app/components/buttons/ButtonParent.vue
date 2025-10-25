@@ -10,7 +10,7 @@
         append="mdi-check"
         fullWidth
         fullHeight
-        borderRadius="10px"
+        :borderRadius=100
         border="2px solid rgb(188,188,188)"
         @onBTNCLICK="handleClick"
       >
