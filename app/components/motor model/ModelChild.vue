@@ -40,6 +40,8 @@
 <script setup>
 import { ref, onMounted, onBeforeUnmount } from "vue";
 
+// width & height : "100%" | "40px"
+// :items :{"موتور تک سیلندر"}
 const props = defineProps({
   items: { type: Array, default: () => [] },
   modelValue: { type: String, default: "" },

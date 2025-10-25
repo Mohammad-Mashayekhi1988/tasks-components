@@ -36,6 +36,15 @@
 <script setup lang="ts">
 import { defineProps, computed } from "vue";
 
+// icon-width & icon-height="15"
+// :icon-url="'/icons/Day.png'"
+// insuranseText="دی"
+// wealth="توانگری مالی"
+// damage="پرداخت خسارت سیار"
+// branchesInfo ="24"
+// wealthInfo = "5 از 5"
+// damageInfo ="دارد"
+
 const props = defineProps({
   insuranseText: String,
   iconUrl: String,

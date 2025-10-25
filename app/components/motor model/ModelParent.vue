@@ -1,6 +1,5 @@
 <template>
   <div id="motor-model">
-    <!-- style="width: 500px; height: 500px;" -->
     <ModelChild
       :items="items"
       v-model:selected="selectedItem"

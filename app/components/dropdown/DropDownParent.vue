@@ -6,8 +6,7 @@
       placeholder="شرکت های  بیمه "
       border="3px solid rgb(42,132,195)"
       radius="10px"
-      fullWidth
-      fulHeight
+
     />
   </div>
 </template>

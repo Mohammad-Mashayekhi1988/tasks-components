@@ -36,15 +36,16 @@
 
 <script setup>
 import { ref, computed, watch } from "vue";
-
+// items { id: 12, label: "البرز" }
+// border="3px solid rgb(42,132,195)"
+// fullWidth $fulHeight
+// radius="10px"
 const props = defineProps({
   items: { type: Array, default: () => [] },
   modelValue: { type: Object, default: null },
   placeholder: { type: String, default: "انتخاب کنید" },
   border: { type: String, default: "1px solid rgb(238, 238, 238)" },
   radius: { type: (String, Number), default: "5px" },
-  fullWidth: Boolean,
-  fulHeight: Boolean,
 });
 
 const emit = defineEmits(["update:modelValue"]);

@@ -27,8 +27,6 @@ const fieldProps = reactive({
   placeholder: "کد ملی",
   type: "text",
   color: "#B6AE9F",
-  // border: "1px solid red",
-  radius: 50,
 });
 
 function onFocus(e: FocusEvent) {

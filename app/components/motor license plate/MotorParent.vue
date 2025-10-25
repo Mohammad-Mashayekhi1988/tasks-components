@@ -7,9 +7,7 @@
 <script setup lang="ts">
 import MotorChild from "./MotorChild.vue";
 
-// نگهداری داده های ارسالی از فرزند
 const motorData = ref({});
-// هروقت دادهای emit شود اجرا میشود
 const handleMotor = (data) => {
   
   motorData.value = data;

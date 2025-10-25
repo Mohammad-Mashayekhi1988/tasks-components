@@ -113,6 +113,7 @@ function openYearList() {
   view.value = 'year';
 }
 
+
 const props = defineProps({
   modelValue: { type: Object, default: null },
   startYearOffset: { type: Number, default: -10 },

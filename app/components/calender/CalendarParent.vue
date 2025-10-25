@@ -1,9 +1,7 @@
 <template>
   <div class="app">
-    <!-- <slot> -->
       <CalendarChild v-model="myDate"
       />
-    <!-- </slot> -->
 
   </div>
 </template>

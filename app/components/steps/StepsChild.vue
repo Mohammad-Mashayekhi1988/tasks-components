@@ -2,7 +2,7 @@
   <div class="container">
     <div
       class="circle"
-      :style="{ backgroundColor: bgColor , border:border}"
+      :style="{ backgroundColor: bgColor , border:border,width:width , height:height}"
     >
       <p class="circle-p" :style="{color: textColor }">{{text}}</p>
     </div>
@@ -11,10 +11,16 @@
 </template>
 
 <script setup lang="ts">
+
+// bgColor="rgb(5,34,74)"
+// border="1px solid #000"
+// textColor="#fff"
+// width="100px"
+// height="100px"
 const props = defineProps({
   bgColor: String,
-  width: Number,
-  height: Number,
+  width: {type: String , default:""},
+  height: {type: String , default:""},
   textColor: String,
   text:String,
   title:String,

@@ -21,7 +21,7 @@
       />
       <div id="arrow">
         <label class="select-icon">
-          <span  class="mdi mdi-chevron-down" aria-hidden="true"></span>
+          <span class="mdi mdi-chevron-down" aria-hidden="true"></span>
         </label>
         <select v-model="selectValue" class="iransans" id="select" size="1">
           <option>الف</option>
@@ -56,6 +56,7 @@
           <option>و</option>
           <option>ه</option>
           <option>ی</option>
+          <option>♿</option>
         </select>
       </div>
       <input v-model="input2" class="iransans" type="number" placeholder="57" />
@@ -70,6 +71,7 @@
 
 <script setup>
 import { ref, watch, reactive } from "vue";
+
 // ارسال updateData به پدر
 const emit = defineEmits(["updateData"]);
 // متغیرهایی که مقدار فیلدها رو نگه میدارن

@@ -39,6 +39,19 @@
 <script setup lang="ts">
 import { computed, useSlots } from "vue";
 
+// height ="100px"
+// fullHeight & fullWidth => 100%
+// text-color ="#00ACC1" | "rgb" | "red"
+// text-size ="1.5rem" | "10px"
+// text-weight="700"
+// border="2px solid #00ACC1"
+// btnBorder -> سایه true | false
+// text="بیمه موتور"
+// mdiIcon="mdi-motorbike"
+// borderRadius="10px" | 20 
+// icon-color = "#00ACC1" | "rgb" | "red"
+// iconSize="2.5rem"
+// iconPosition="top" | "left" | "right"
 const props = defineProps({
   iconColor: { type: String, default: "white" },
   textColor: { type: String, default: "black" },

@@ -1,5 +1,7 @@
 <template>
-  <main class="bg-white ma-1 iransans">
+  <main class="bg-white ma-1 iransans"
+  :style="{width:width , height:height}"
+  >
     <v-row class="pa-1 ma-1 d-flex justify-center align-center">
       <v-col cols="6" class="text-end">
         <v-card-text
@@ -26,16 +28,6 @@
     </v-row>
     <v-row>
       <v-col cols="6">
-<!--
-text: String
-textColor: String, default: black
-textSize:  String, default: 1rem
-fullWidth: Boolean
-textWeight:[String, Number], default: 400
-height: String
-color: String
-borderRadius: [String, Number] 
--->
         <ButtonChild
           fullWidth
           text="انتخاب بیمه"
@@ -48,22 +40,6 @@ borderRadius: [String, Number]
         />
       </v-col>
       <v-col cols="6">
-<!-- 
-  text: String
-  iconColor: String, default: white
-  textColor: String, default: black
-  textSize:  String, default: 1rem
-  fullWidth: Boolean  
-  mdiIcon: String
-  icon: String
-  iconPosition: String, default: ""
-  validator: (v: string) => ["left", "right", "top"].includes(v), 
-  textWeight:[String, Number], default: 400
-  height: String
-  color: String
-  borderRadius: [String, Number]
-  fullHeight: Boolean
--->
         <ButtonChild
           fullWidth
           text="افزودن برای مقایسه"
@@ -90,9 +66,14 @@ import ButtonChild from "../buttons/ButtonChild.vue";
 
 import { computed, defineProps } from "vue";
 
+// text="5555555"
+// number="5065981"
+// discount = 7
+//  currency="ریال"
+// width & height : "100%" | "10px"
 const props = defineProps({
-  width: { type: Number, default: 30 },
-  height: { type: Number, default: 30 },
+  width: { type: String, default: "30px" },
+  height: { type: String, default: "30px" },
   radius: { type: [String, Number], default: 0 },
   bg: { type: String, default: "transparent" },
   text: String,

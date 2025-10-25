@@ -6,9 +6,7 @@
 
 <script setup lang="ts">
 import CarChild from "./CarChild.vue";
-// نگهداری داده های ارسالی از فرزند
 const receivedData = ref({});
-// هروقت دادهای emit شود اجرا میشود
 const handleData = (data) => {
   receivedData.value = data;
   console.log("داده دریافت شده از فرزند:", data);

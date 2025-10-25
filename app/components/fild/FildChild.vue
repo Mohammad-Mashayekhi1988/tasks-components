@@ -24,6 +24,8 @@
 <script setup lang="ts">
 import { computed, ref, watch } from "vue";
 
+  // width & height :  600 | "600px"
+
 const props = defineProps({
   label: String,
 
@@ -36,8 +38,6 @@ const props = defineProps({
   border: { type: String, default: "" },
 
   borderRadius: { type: [String, Number] },
-
-  // variant: { type: String, default: 'rounded' },
   customClass: { type: String, default: "" },
 });
 
@@ -64,7 +64,6 @@ watch(innerValue, (v) => {
 });
 
 const rootStyle: any = computed(() => {
-  // const w = typeof props.width === 'number' ? `${props.width}px` : props.width
   const w = parseInt(props.width + "") + "px";
   const h =
     typeof props.height === "number" ? `${props.height}px` : props.height;
